@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,43 +14,46 @@ namespace RegInfoMod
 {
     public partial class maindlg : Form
     {
-        string usrName = "string.user.name";
-        string orgName = "string.org.name";
-        const string regKey = "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion";
         const string regUsrNode = "RegisteredOwner";
         const string regOrgNode = "RegisteredOrganization";
+        object usrName = "string.user.name";
+        object orgName = "string.org.name";
+        RegistryKey regKey = Registry.LocalMachine;
         public maindlg()
         {
             InitializeComponent();
         }
         private void getInfo()
         {
-            usrName = Registry.GetValue(regKey, regUsrNode, "string.user.name").ToString();
-            orgName = Registry.GetValue(regKey, regOrgNode, "string.org.name").ToString();
-            regUsrBox.Text = usrName;
-            regOrgBox.Text = orgName;
+            usrName = regKey.GetValue(regUsrNode);
+            orgName = regKey.GetValue(regOrgNode);
+            regUsrBox.Text = usrName.ToString();
+            regOrgBox.Text = orgName.ToString();
         }
         private void maindlg_Load(object sender, EventArgs e)
         {
-            getInfo();
+            string key = @"SOFTWARE\Microsoft\Windows NT\CurrentVersion\";
             try
             {
-                Registry.SetValue(regKey, regUsrNode, usrName);
+                regKey = regKey.CreateSubKey(key);
             }
             catch (UnauthorizedAccessException)
             {
-                string text = "This program can not provide any real function without running as Administator, as it directly modifies the Windows Registry.";
+                string text = "This program can only open in read-only mode, as it directly modifies the Windows Registry.\nRun this program as Administrator to write values.";
                 string title = "Insufficient Permissions";
                 MessageBoxButtons button = MessageBoxButtons.OK;
                 MessageBoxIcon icon = MessageBoxIcon.Error;
                 MessageBox.Show(text, title, button, icon);
+                regKey = regKey.OpenSubKey(key);
                 regUsrBox.Enabled = false;
                 regOrgBox.Enabled = false;
                 getInfoCmd.Enabled = false;
                 updCmd.Enabled = false;
+                getInfo();
                 return;
                 throw;
             }
+            getInfo();
         }
 
         private void getInfoCmd_Click(object sender, EventArgs e)
@@ -74,8 +78,8 @@ namespace RegInfoMod
             DialogResult result = MessageBox.Show(text, title, buttons, icon);
             if (result == DialogResult.Yes)
             {
-                Registry.SetValue(regKey, regUsrNode, regUsrBox.Text);
-                Registry.SetValue(regKey, regOrgNode, regOrgBox.Text);
+                regKey.SetValue(regUsrNode, regUsrBox.Text);
+                regKey.SetValue(regOrgNode, regOrgBox.Text);
             }
         }
     }
