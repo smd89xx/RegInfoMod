@@ -11,9 +11,7 @@ Simple application to modify registered user information displayed in places lik
 	- For Running: .NET Framework 4.5.2 Runtime
 	- For Building: 
 		- .NET Framework 4.5.2 Development Pack
-		- Visual Studio 2022<sup>1</sup>
-
-<sup>1</sup>Will be (hopefully) lowered in the future.
+		- Visual Studio 2015
 
 <hr>
 

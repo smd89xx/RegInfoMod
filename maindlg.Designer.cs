@@ -42,15 +42,15 @@
             this.regUsrLbl.AutoSize = true;
             this.regUsrLbl.Location = new System.Drawing.Point(12, 9);
             this.regUsrLbl.Name = "regUsrLbl";
-            this.regUsrLbl.Size = new System.Drawing.Size(86, 13);
+            this.regUsrLbl.Size = new System.Drawing.Size(103, 13);
             this.regUsrLbl.TabIndex = 0;
-            this.regUsrLbl.Text = "Registered User:";
+            this.regUsrLbl.Text = "Registered Owner:";
             // 
             // regUsrBox
             // 
             this.regUsrBox.Location = new System.Drawing.Point(12, 25);
             this.regUsrBox.Name = "regUsrBox";
-            this.regUsrBox.Size = new System.Drawing.Size(420, 20);
+            this.regUsrBox.Size = new System.Drawing.Size(420, 22);
             this.regUsrBox.TabIndex = 1;
             // 
             // regOrgLbl
@@ -58,7 +58,7 @@
             this.regOrgLbl.AutoSize = true;
             this.regOrgLbl.Location = new System.Drawing.Point(12, 48);
             this.regOrgLbl.Name = "regOrgLbl";
-            this.regOrgLbl.Size = new System.Drawing.Size(123, 13);
+            this.regOrgLbl.Size = new System.Drawing.Size(136, 13);
             this.regOrgLbl.TabIndex = 2;
             this.regOrgLbl.Text = "Registered Organization:";
             // 
@@ -66,7 +66,7 @@
             // 
             this.regOrgBox.Location = new System.Drawing.Point(12, 64);
             this.regOrgBox.Name = "regOrgBox";
-            this.regOrgBox.Size = new System.Drawing.Size(420, 20);
+            this.regOrgBox.Size = new System.Drawing.Size(420, 22);
             this.regOrgBox.TabIndex = 3;
             // 
             // getInfoCmd

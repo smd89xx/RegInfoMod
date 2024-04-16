@@ -71,7 +71,7 @@ namespace RegInfoMod
 
         private void updCmd_Click(object sender, EventArgs e)
         {
-            string text = "This will replace the current values with the one input here.\nAre you sure you would like to continue?\nAlso note that this program only takes visual effect after a reboot.";
+            string text = "This will replace the current registry values with the ones input here.\nAre you sure you would like to continue?";
             string title = "Confirm Update";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
             MessageBoxIcon icon = MessageBoxIcon.Exclamation;
