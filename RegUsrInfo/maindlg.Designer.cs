@@ -1,4 +1,4 @@
-﻿namespace RegInfoMod
+namespace RegUsrInfo
 {
     partial class maindlg
     {
@@ -42,15 +42,15 @@
             this.regUsrLbl.AutoSize = true;
             this.regUsrLbl.Location = new System.Drawing.Point(12, 9);
             this.regUsrLbl.Name = "regUsrLbl";
-            this.regUsrLbl.Size = new System.Drawing.Size(103, 13);
+            this.regUsrLbl.Size = new System.Drawing.Size(95, 13);
             this.regUsrLbl.TabIndex = 0;
             this.regUsrLbl.Text = "Registered Owner:";
             // 
             // regUsrBox
             // 
-            this.regUsrBox.Location = new System.Drawing.Point(12, 25);
+            this.regUsrBox.Location = new System.Drawing.Point(15, 25);
             this.regUsrBox.Name = "regUsrBox";
-            this.regUsrBox.Size = new System.Drawing.Size(420, 22);
+            this.regUsrBox.Size = new System.Drawing.Size(373, 20);
             this.regUsrBox.TabIndex = 1;
             // 
             // regOrgLbl
@@ -58,22 +58,22 @@
             this.regOrgLbl.AutoSize = true;
             this.regOrgLbl.Location = new System.Drawing.Point(12, 48);
             this.regOrgLbl.Name = "regOrgLbl";
-            this.regOrgLbl.Size = new System.Drawing.Size(136, 13);
+            this.regOrgLbl.Size = new System.Drawing.Size(123, 13);
             this.regOrgLbl.TabIndex = 2;
             this.regOrgLbl.Text = "Registered Organization:";
             // 
             // regOrgBox
             // 
-            this.regOrgBox.Location = new System.Drawing.Point(12, 64);
+            this.regOrgBox.Location = new System.Drawing.Point(15, 64);
             this.regOrgBox.Name = "regOrgBox";
-            this.regOrgBox.Size = new System.Drawing.Size(420, 22);
+            this.regOrgBox.Size = new System.Drawing.Size(373, 20);
             this.regOrgBox.TabIndex = 3;
             // 
             // getInfoCmd
             // 
-            this.getInfoCmd.Location = new System.Drawing.Point(114, 90);
+            this.getInfoCmd.Location = new System.Drawing.Point(105, 90);
             this.getInfoCmd.Name = "getInfoCmd";
-            this.getInfoCmd.Size = new System.Drawing.Size(105, 23);
+            this.getInfoCmd.Size = new System.Drawing.Size(92, 23);
             this.getInfoCmd.TabIndex = 4;
             this.getInfoCmd.Text = "Get Current Info";
             this.getInfoCmd.UseVisualStyleBackColor = true;
@@ -81,9 +81,9 @@
             // 
             // updCmd
             // 
-            this.updCmd.Location = new System.Drawing.Point(225, 90);
+            this.updCmd.Location = new System.Drawing.Point(203, 90);
             this.updCmd.Name = "updCmd";
-            this.updCmd.Size = new System.Drawing.Size(105, 23);
+            this.updCmd.Size = new System.Drawing.Size(92, 23);
             this.updCmd.TabIndex = 5;
             this.updCmd.Text = "Update Info";
             this.updCmd.UseVisualStyleBackColor = true;
@@ -93,7 +93,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(444, 119);
+            this.ClientSize = new System.Drawing.Size(400, 116);
             this.Controls.Add(this.updCmd);
             this.Controls.Add(this.getInfoCmd);
             this.Controls.Add(this.regOrgBox);
