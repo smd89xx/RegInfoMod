@@ -1,8 +1,0 @@
-bin\Debug\RegUsrInfo.exe
-bin\Debug\RegUsrInfo.pdb
-obj\Debug\ResolveAssemblyReference.cache
-obj\Debug\RegUsrInfo.maindlg.resources
-obj\Debug\RegUsrInfo.Properties.Resources.resources
-obj\Debug\RegUsrInfo.csproj.GenerateResource.Cache
-obj\Debug\RegUsrInfo.exe
-obj\Debug\RegUsrInfo.pdb
