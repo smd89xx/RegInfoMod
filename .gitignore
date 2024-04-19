@@ -1,3 +1,5 @@
 .vs/*
 bin/*
 obj/*
+RegUsrInfo/bin/*
+RegUsrInfo/obj/*
