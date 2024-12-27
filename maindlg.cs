@@ -1,13 +1,5 @@
 ﻿using Microsoft.Win32;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Security.Permissions;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace RegInfoMod
@@ -39,7 +31,7 @@ namespace RegInfoMod
             }
             catch (UnauthorizedAccessException)
             {
-                string text = "This program can only open in read-only mode, as it directly modifies the Windows Registry.\nRun this program as Administrator to write values.";
+                string text = "This program can only open in read-only mode, as the Registry keys it wants to modify require Administrator privileges.";
                 string title = "Insufficient Permissions";
                 MessageBoxButtons button = MessageBoxButtons.OK;
                 MessageBoxIcon icon = MessageBoxIcon.Error;
@@ -58,7 +50,7 @@ namespace RegInfoMod
 
         private void getInfoCmd_Click(object sender, EventArgs e)
         {
-            string text = "This will replace all text currently entered into the fields.\nAre you sure you would like to continue?";
+            string text = "This will replace all text currently entered into the fields with the current registered owner and organization in the Registry.\nAre you sure you would like to continue?";
             string title = "Confirm Reversion";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
             MessageBoxIcon icon = MessageBoxIcon.Exclamation;
@@ -71,7 +63,7 @@ namespace RegInfoMod
 
         private void updCmd_Click(object sender, EventArgs e)
         {
-            string text = "This will replace the current registered owner and organization in the registry with the text entered in the fields.\nAre you sure you would like to continue?";
+            string text = "This will replace the current registered owner and organization in the Registry with the text entered in the fields.\nAre you sure you would like to continue?";
             string title = "Confirm Update";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
             MessageBoxIcon icon = MessageBoxIcon.Exclamation;

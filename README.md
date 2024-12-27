@@ -6,12 +6,12 @@ Simple application to modify registered user information displayed in places lik
 
 ## System Requirements
 
-- Operating System: Windows Vista Service Pack 2 (or newer)
+- Operating System: Windows 2000 Service Pack 4 (or newer, x86-32 & x86-64)
 - Additional Dependencies:
-	- For Running: .NET Framework 4.5.2 Runtime
+	- For Running: .NET Framework 2.0 Redistributable
 	- For Building: 
-		- .NET Framework 4.5.2 Development Pack
-		- Visual Studio 2015
+		- .NET Framework 2.0 SDK
+		- Visual Studio 20XX
 
 <hr>
 
