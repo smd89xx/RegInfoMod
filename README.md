@@ -1,4 +1,4 @@
-# Windows Registry Info Modifier
+# Windows Registered Info Modifier
 
 Simple application to modify registered user information displayed in places like `winver.exe`.
 
@@ -7,12 +7,13 @@ Simple application to modify registered user information displayed in places lik
 ## System Requirements
 
 - Running
-	- Windows 2000 Service Pack 4 or above (both 32 and 64-bit)
+	- Windows 2000 Service Pack 4 or above
+	- An x86 or AMD64 processor
 	- .NET Runtime Version 2.0
 - Building
-	- Windows XP Service Pack 3 or above (32-bit), or Windows XP Service Pack 2 or above (64-bit)
+	- Windows XP x86 Service Pack 3/AMD64 Service Pack 2 or above
 	- .NET SDK Version 2.0
-	- Visual Studio 2010 (VS2005 wouldn't behave)
+	- Visual Studio 2010 with C# support (VS2005 wouldn't behave)
 
 <hr>
 
